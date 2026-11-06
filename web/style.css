@@ -1,0 +1,77 @@
+/* Pacifica navy #003260 and dusk #99adbf, from the school's own site. Works offline:
+   no web fonts, nothing loaded from the internet. */
+:root {
+  --bg: #001a33;
+  --panel: #003260;
+  --text: #e8eef4;
+  --dim: #99adbf;
+  --dir: #7cc4ff;
+  --gold: #f2c14e;
+  --err: #ff8a80;
+  --ok: #9be29b;
+  --mono: "JetBrainsMono Nerd Font", "JetBrains Mono", "DejaVu Sans Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 var(--mono);
+  display: flex;
+  flex-direction: column;
+}
+header { background: var(--panel); padding: 10px 16px; border-bottom: 1px solid #0b4a85; }
+.bar { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--dim); }
+.brand { color: var(--text); font-weight: 700; letter-spacing: .5px; }
+#chapter { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#progress { width: 120px; height: 6px; background: #0b2a4a; border-radius: 3px; overflow: hidden; flex: none; }
+#progress-fill { display: block; height: 100%; width: 0; background: var(--gold); transition: width .4s; }
+#goal { margin-top: 6px; color: var(--gold); font-weight: 700; }
+#goal:empty { display: none; }
+
+main { flex: 1; overflow-y: auto; padding: 16px; cursor: text; }
+#log div { white-space: pre-wrap; word-break: break-word; min-height: 1.45em; }
+.cmd { color: var(--text); }
+.cmd .p, #prompt { color: var(--ok); }
+.dir { color: var(--dir); font-weight: 700; }
+.err { color: var(--err); }
+.dim, .desc { color: var(--dim); }
+.desc { font-style: italic; }
+.story { color: var(--text); }
+.goal { color: var(--gold); font-weight: 700; }
+.hint { color: var(--gold); }
+.chapter { color: var(--gold); font-weight: 700; margin-top: .6em; }
+mark { background: var(--gold); color: #001a33; border-radius: 2px; }
+
+#line { display: flex; gap: .6ch; align-items: baseline; }
+#prompt { white-space: nowrap; }
+#input {
+  flex: 1; min-width: 4ch; background: transparent; border: 0; outline: 0;
+  color: var(--text); font: inherit; caret-color: var(--gold); padding: 0;
+}
+
+#done {
+  position: fixed; inset: 0; background: rgba(0, 16, 32, .85);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+#done[hidden] { display: none; }
+.card {
+  background: var(--panel); border: 2px solid var(--gold); border-radius: 14px;
+  padding: 28px; max-width: 420px; width: 100%; text-align: center;
+}
+.badge { font-size: 56px; }
+.card h1 { margin: 8px 0; color: var(--gold); font-size: 24px; }
+.card p { color: var(--dim); }
+#apps { list-style: none; padding: 0; margin: 16px 0; text-align: left; display: inline-block; }
+#apps li { margin: 6px 0; }
+kbd { background: #0b2a4a; border: 1px solid var(--dim); border-radius: 4px; padding: 1px 6px; font: inherit; font-size: 14px; }
+button {
+  font: inherit; background: var(--gold); color: #001a33; border: 0; border-radius: 8px;
+  padding: 10px 18px; font-weight: 700; cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+  #input { font-size: 16px; } /* stops phones zooming in on focus */
+  #progress { width: 60px; }
+}

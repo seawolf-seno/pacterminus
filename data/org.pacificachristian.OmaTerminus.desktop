@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PacTerminus
+GenericName=Command-Line Quest
+Comment=Learn the command line by finding the Pacifica Cup
+Exec=omaterminus
+Icon=omaterminus
+Terminal=false
+StartupNotify=true
+StartupWMClass=org.pacificachristian.OmaTerminus
+Categories=Education;Game;
+Keywords=terminal;shell;command;learn;pacifica;

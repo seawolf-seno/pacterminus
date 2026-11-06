@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PacTerminus</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="bar">
+    <span class="brand">PacTerminus</span>
+    <span id="chapter"></span>
+    <span id="progress" aria-label="progress"><span id="progress-fill"></span></span>
+  </div>
+  <div id="goal" aria-live="polite"></div>
+</header>
+<main id="screen" aria-live="polite">
+  <div id="log"></div>
+  <form id="line" autocomplete="off">
+    <label id="prompt" for="input"></label>
+    <input id="input" spellcheck="false" autocapitalize="off" autocorrect="off" autofocus>
+  </form>
+</main>
+<div id="done" hidden>
+  <div class="card">
+    <div class="badge">🐺</div>
+    <h1>Pack Pass unlocked</h1>
+    <p>Welcome to the Wolfpack. The rest of your computer is open:</p>
+    <ul id="apps">
+      <li><kbd>Super</kbd> + <kbd>1</kbd> Canvas</li>
+      <li><kbd>Super</kbd> + <kbd>2</kbd> Omawrite</li>
+      <li><kbd>Super</kbd> + <kbd>3</kbd> Omacalc</li>
+      <li><kbd>Super</kbd> + <kbd>4</kbd> Desmos</li>
+    </ul>
+    <button id="stay">Keep exploring</button>
+  </div>
+</div>
+<script src="engine.js"></script>
+<script src="world.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

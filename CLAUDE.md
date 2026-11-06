@@ -13,7 +13,7 @@ Sibling of `omacanvas`/`omadesmos`; installed by `pacos` (Super+5). Fizzy: PacOS
   Hyprland config binds Super+1–4. pacos `bin/pacos-start` opens this at login until then.
 
 ## Status
-- 0.1.0 (2026-11-01): full playthrough passes in Node and in the desktop window on seno's
+- 0.1.0 (2026-11-01, pushed to github.com/seawolf-seno/pacterminus 2026-11-05): full playthrough passes in Node and in the desktop window on seno's
   machine (marker written, `hyprctl reload` called). Package builds.
 - Not yet tested in the pacos VM as a student (gate + reload) or on a Framework.
 - Content from the website mirror; the Drive "charter" couldn't be read (connector auth failed).
